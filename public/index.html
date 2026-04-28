@@ -319,9 +319,57 @@
       </div>
     </div>
 
-    <div class="mt-10 text-center">
-      <a href="/slides/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-brand-700 dark:text-brand-300 hover:text-brand-800 dark:hover:text-brand-200 btn-touch">
-        Komplette Programm-Slides ansehen →
+  </div>
+</section>
+
+<!-- Programm-Präsentation: Slide-Deck embedded + Downloads -->
+<section id="praesentation" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+      <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">Vollständige Präsentation</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Das ganze Programm auf einen Blick</h2>
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">21 Slides — alle Phasen, alle Lektionen, alle Ergebnisse. Pfeiltasten zum Durchblättern.</p>
+    </div>
+
+    <!-- Iframe Embed: 4:3 auf Mobile (lesbarer), 16:9 ab Tablet -->
+    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 bg-slate-900 aspect-[4/3] sm:aspect-video min-h-[420px] sm:min-h-0">
+      <iframe
+        src="/slides"
+        title="AI-Businessbrain Kurs — Vollständige Präsentation"
+        class="absolute inset-0 w-full h-full"
+        loading="lazy"
+        allow="fullscreen"
+      ></iframe>
+    </div>
+
+    <!-- Vollbild-Button immer sichtbar -->
+    <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+      <a href="/slides" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg btn-touch transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        Im Vollbild öffnen
+      </a>
+      <span class="hidden sm:inline text-xs text-slate-500 dark:text-slate-400">Im Vollbild Pfeiltasten ← → zum Durchblättern</span>
+    </div>
+
+    <!-- Download Buttons -->
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
+      <a href="/downloads/AI-Businessbrain-Kurs-Slides.pdf" download class="group flex items-center gap-4 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-600 transition-colors btn-touch">
+        <div class="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </div>
+        <div class="text-left flex-1">
+          <div class="font-semibold">Als PDF herunterladen</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400">7.3 MB · druckbar · offline</div>
+        </div>
+      </a>
+      <a href="/downloads/AI-Businessbrain-Kurs.html" download class="group flex items-center gap-4 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-600 transition-colors btn-touch">
+        <div class="w-12 h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <div class="text-left flex-1">
+          <div class="font-semibold">Als HTML herunterladen</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400">64 KB · interaktiv · selbst hosten</div>
+        </div>
       </a>
     </div>
   </div>
