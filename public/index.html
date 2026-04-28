@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Businessbrain in 5 Wochen — Maker Academy by Contextery</title>
+<meta name="description" content="5-Wochen-Umsetzungsschmiede für Schweizer KMU. Du baust dein AI-Businessbrain — keinen Theoriekurs. 10 Live-Sessions, konkretes Ergebnis pro Lektion.">
+<meta property="og:title" content="AI-Businessbrain in 5 Wochen — Maker Academy">
+<meta property="og:description" content="Umsetzungsschmiede für Schweizer KMU. 10 Live-Sessions, konkretes Ergebnis pro Lektion.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          brand: {
+            50:  '#f5f3ff',
+            100: '#ede9fe',
+            200: '#ddd6fe',
+            300: '#c4b5fd',
+            400: '#a78bfa',
+            500: '#8b5cf6',
+            600: '#7c3aed',
+            700: '#6d28d9',
+            800: '#5b21b6',
+            900: '#4c1d95',
+          },
+          accent: '#06b6d4',
+          gold: '#eab308',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .gradient-text {
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .gradient-bg-light {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.18), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 30%, rgba(6, 182, 212, 0.12), transparent);
+  }
+  .gradient-bg-dark {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.25), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 30%, rgba(6, 182, 212, 0.18), transparent);
+  }
+  /* Touch targets min 44px */
+  .btn-touch { min-height: 44px; min-width: 44px; }
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+<!-- Header / Nav -->
+<header class="sticky top-0 z-40 backdrop-blur-xl bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="font-extrabold text-lg sm:text-xl tracking-tight">
+      <span class="gradient-text">Maker</span> Academy
+    </a>
+    <div class="flex items-center gap-2 sm:gap-4">
+      <a href="#anmelden" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg btn-touch transition-colors">
+        Platz sichern
+      </a>
+      <button id="theme-toggle" type="button" aria-label="Theme wechseln" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 btn-touch transition-colors">
+        <svg id="icon-sun" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <svg id="icon-moon" class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative overflow-hidden gradient-bg-light dark:gradient-bg-dark">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-16 sm:pb-24">
+    <div class="text-center max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs sm:text-sm font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+        Nächste Kohorte: 12. Mai 2026 · 8 Plätze frei
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+        Dein <span class="gradient-text">AI-Businessbrain</span><br>
+        in 5 Wochen.
+      </h1>
+      <p class="mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl mx-auto">
+        Kein Theorie-Kurs. Eine Umsetzungsschmiede für Schweizer KMU. Du verlässt jede Session mit einem konkreten System für dein Geschäft.
+      </p>
+      <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+        <a href="#anmelden" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all btn-touch">
+          Jetzt Platz sichern → CHF 2'990
+        </a>
+        <a href="#programm" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl btn-touch transition-colors">
+          Programm ansehen
+        </a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 bg-slate-900 aspect-video">
+        <iframe
+          src="https://www.youtube.com/embed/gYJJ2fqBJHE?rel=0"
+          title="AI-Businessbrain Kurs Übersicht"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem & Lösung -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 sm:gap-12">
+      <div class="rounded-2xl p-6 sm:p-8 bg-rose-50 dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40">
+        <div class="text-xs font-semibold uppercase tracking-widest text-rose-600 dark:text-rose-400 mb-3">Das Problem</div>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">Jeder benutzt ChatGPT. Trotzdem bleibt's generisch.</h2>
+        <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+          Die Antworten sind oberflächlich. Du fängst jedes Mal von vorn an. Dein Team macht alles unterschiedlich. Warum? Weil das Tool deinen Kontext nicht kennt — nicht dich, nicht deine Firma, nicht deine Kunden.
+        </p>
+      </div>
+      <div class="rounded-2xl p-6 sm:p-8 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/40">
+        <div class="text-xs font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-3">Die Lösung</div>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">Erst Kontext. Dann Automatisierung.</h2>
+        <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+          Was nicht dokumentiert ist, kann nicht automatisiert werden. Wir bauen zuerst dein Businessbrain — dein Geschäft als Kontext für die KI. Dann automatisieren wir, was sich rechnet. In 5 Wochen, mit konkreten Resultaten pro Session.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Auf einen Blick -->
+<section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-8">Auf einen Blick</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div class="text-center p-4 sm:p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <div class="text-3xl sm:text-4xl font-extrabold gradient-text">5</div>
+        <div class="mt-2 text-sm sm:text-base font-medium text-slate-600 dark:text-slate-400">Wochen</div>
+      </div>
+      <div class="text-center p-4 sm:p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <div class="text-3xl sm:text-4xl font-extrabold gradient-text">10</div>
+        <div class="mt-2 text-sm sm:text-base font-medium text-slate-600 dark:text-slate-400">Live-Sessions</div>
+      </div>
+      <div class="text-center p-4 sm:p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <div class="text-3xl sm:text-4xl font-extrabold gradient-text">2h</div>
+        <div class="mt-2 text-sm sm:text-base font-medium text-slate-600 dark:text-slate-400">pro Session</div>
+      </div>
+      <div class="text-center p-4 sm:p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <div class="text-3xl sm:text-4xl font-extrabold gradient-text">19—21</div>
+        <div class="mt-2 text-sm sm:text-base font-medium text-slate-600 dark:text-slate-400">Di & Do, Uhr</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 Phasen -->
+<section id="programm" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+      <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">Die fünf Phasen</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Dein Bauplan in 5 Phasen</h2>
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Jede Phase = 2 Lektionen. Jede Lektion bringt ein konkretes Ergebnis nach Hause.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+      <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+        <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold mb-4">1</div>
+        <h3 class="text-lg font-bold mb-2">Klarheit mit AI</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Du verstehst, was AI mit deinem Job macht. Bauen den ersten persönlichen Master-Prompt.</p>
+      </div>
+      <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+        <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold mb-4">2</div>
+        <h3 class="text-lg font-bold mb-2">Prozess & Plan</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Du siehst, wie deine Firma wirklich arbeitet. Prozessmappe + 90-Tage-Plan.</p>
+      </div>
+      <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+        <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold mb-4">3</div>
+        <h3 class="text-lg font-bold mb-2">Kunde & Markt</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Klares Angebot in einem Satz. Webinar-Aktion startbereit.</p>
+      </div>
+      <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+        <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold mb-4">4</div>
+        <h3 class="text-lg font-bold mb-2">Automation</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Claude Cowork und eine eigene Landing-Page in 2 Stunden — live gebaut.</p>
+      </div>
+      <div class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+        <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold mb-4">5</div>
+        <h3 class="text-lg font-bold mb-2">Wachstum & Routine</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Tages-Helfer, der jeden Morgen die wichtigsten 3 Aufgaben bringt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lehrplan-Detail -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">10 Lektionen — 10 Ergebnisse</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Was du Schwarz auf Weiss mitnimmst</h2>
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Nicht eine Liste mit dem, was du <em>lernst</em> — sondern was du am Ende jeder Lektion <em>hast</em>. Das ist der Vertrag.</p>
+    </div>
+
+    <div class="space-y-3">
+      <!-- Lesson row template repeated -->
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L1</div>
+        <div>
+          <div class="font-semibold">AI in meinem Job</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Drei Fragen, vier Ebenen — die ehrliche Standortbestimmung</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Papier für die GL-Sitzung</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L2</div>
+        <div>
+          <div class="font-semibold">Master-Prompt</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Persönlich, Rolle, Firma — KI, die dich kennt</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Dein Master-Prompt-System</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L3</div>
+        <div>
+          <div class="font-semibold">Prozessmappe</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Marketing, Verkauf, Customer Success + SOPs</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Die Karte deines Geschäfts</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L4</div>
+        <div>
+          <div class="font-semibold">Wo AI zuerst ran</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Bewertung nach Wichtigkeit + AI-Eignung</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ 30/90-Tage-Plan</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L5</div>
+        <div>
+          <div class="font-semibold">Klares Angebot</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Kunde verstehen, Pitch in einem Satz, Lead Magnet</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Dein Gratis-Angebot</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L6</div>
+        <div>
+          <div class="font-semibold">Webinar-Aktion</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Plan, Einladungen, Nachfass, Brevo-Setup</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Komplette Funnel-Aktion</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L7</div>
+        <div>
+          <div class="font-semibold">Claude Cowork</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">LinkedIn-Posts, Branchen-Übersicht, Newsletter — automatisch</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Inhalts-Maschine</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L8</div>
+        <div>
+          <div class="font-semibold">Landing-Page in 2 Stunden</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Live mit Claude Code + Vercel — was sonst eine Agentur 4 Wochen kostet</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Eigene Webseite live</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L9</div>
+        <div>
+          <div class="font-semibold">Bericht-Generator</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">Persönliche Berichte pro Interessent — automatisch erstellt</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Personalisierter Outreach</div>
+      </div>
+
+      <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] gap-4 sm:gap-6 p-4 sm:p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 items-center">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 flex items-center justify-center font-bold text-sm sm:text-base">L10</div>
+        <div>
+          <div class="font-semibold">Tages-Routine</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400">07 Uhr morgens: die wichtigsten 3 Aufgaben für heute</div>
+        </div>
+        <div class="hidden sm:block text-sm font-medium text-emerald-600 dark:text-emerald-400 whitespace-nowrap">→ Tages-Helfer</div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="/slides/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-brand-700 dark:text-brand-300 hover:text-brand-800 dark:hover:text-brand-200 btn-touch">
+        Komplette Programm-Slides ansehen →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Trainer -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+      <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">Wer dich begleitet</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Lead Trainer</h2>
+    </div>
+    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+      <img src="https://cdn.prod.website-files.com/64c7c92909254b836d7d6fdf/650089f5636bb4eda08a5f16_qris-riner.png" alt="Qris Riner" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover ring-4 ring-brand-100 dark:ring-brand-900/40" loading="lazy">
+      <div class="text-center sm:text-left flex-1">
+        <h3 class="text-2xl font-bold">Qris Riner</h3>
+        <p class="text-brand-600 dark:text-brand-400 font-semibold mt-1">Founder Contextery · Gründer SwissAI</p>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Serial Entrepreneur · 500+ Coachings, Trainings & Referate</p>
+        <p class="mt-4 text-base sm:text-lg text-slate-700 dark:text-slate-300 italic">«Ich zeige dir, wie du KI nicht nur verstehst, sondern ab Tag 1 produktiv einsetzt.»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing / Anmelden -->
+<section id="anmelden" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-10">
+      <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">Jetzt anmelden</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">5-Wochen-Umsetzungsschmiede</h2>
+    </div>
+    <div class="bg-white dark:bg-slate-900 rounded-3xl border border-brand-200 dark:border-brand-800 shadow-2xl shadow-brand-500/10 p-6 sm:p-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+        Nur noch 8 Plätze frei
+      </div>
+
+      <div class="text-center sm:text-left mb-6">
+        <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">5-Wochen-Umsetzungsschmiede</div>
+        <p class="text-lg font-medium leading-relaxed">Kein Theorie-Kurs. Eine Umsetzungsschmiede mit konkreten Resultaten am Ende jeder Session.</p>
+        <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">10 Mittagssessions · 2× pro Woche · Start: 12. Mai 2026</p>
+      </div>
+
+      <div class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mt-8 mb-3">Was du bekommst</div>
+      <ul class="space-y-2.5 text-sm sm:text-base">
+        <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Komplettes Vorlagensystem — alle Prompts & Frameworks</span></li>
+        <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>90 Tage Session-Aufzeichnungen</span></li>
+        <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Community-Zugang</span></li>
+        <li class="flex items-start gap-2.5"><svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>90 Tage Support nach Kursende</span></li>
+      </ul>
+
+      <!-- Frühbucher Bonus -->
+      <div class="mt-6 rounded-xl border border-amber-300 dark:border-amber-700/60 bg-amber-50 dark:bg-amber-950/20 p-4">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-0.5">Bonus für die letzten 8 Plätze</div>
+            <div class="text-sm">1:1 Strategiegespräch mit Qris Riner — 30 Min</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Garantie -->
+      <div class="mt-3 rounded-xl border border-emerald-300 dark:border-emerald-700/60 bg-emerald-50 dark:bg-emerald-950/20 p-4">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-0.5">Risikofrei testen</div>
+            <div class="text-sm">Volle Rückerstattung nach Session 1 — wenn der Stil nicht passt, kriegst du dein Geld zurück.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Investition -->
+      <div class="border-t border-slate-200 dark:border-slate-800 pt-6 mt-8">
+        <div class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-1">Investition</div>
+        <div class="text-3xl font-extrabold tracking-tight">CHF 2'990</div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">≈ CHF 299 pro Session · Ratenzahlung auf Anfrage möglich</p>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Für Schweizer KMU mit Fokus auf Wachstum, Sales & Marketing</p>
+      </div>
+
+      <a href="https://www.calendly.com/qrisriner" target="_blank" rel="noopener" class="mt-8 w-full inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all btn-touch">
+        Erstgespräch buchen
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <p class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">Kreditkarte / Rechnung · Schweizer Anbieter</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10 sm:mb-12">
+      <div class="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">FAQ</div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Häufige Fragen</h2>
+    </div>
+    <div class="space-y-3">
+      <details class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+          <span>Ich nutze AI schon — bringt mir der Kurs noch was?</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">ChatGPT-Nutzen ohne Kontext bringt 20 % der möglichen Resultate. Wir bauen das Businessbrain — den Kontext, der KI für dein Geschäft 5× wertvoller macht. Plus: Cowork, Agents, Funnels — Themen, die du mit Reden und Lesen nicht selber erschliesst.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+          <span>Was wenn ich eine Session verpasse?</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Alle Sessions werden aufgezeichnet. Du hast 90 Tage Zugriff. Aber: live ist live — die Energie und der Austausch lassen sich nicht aufholen, deshalb ist das Format als Kohorte konzipiert.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+          <span>Brauche ich Programmier-Kenntnisse?</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Nein. Lektion 8 (Landing-Page in 2h) bauen wir mit Vibe Coding — du beschreibst, die KI baut. Wenn du E-Mail-Templates schreiben kannst, kommst du durch.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+          <span>CHF 2'990 — kann ich's auch in Raten zahlen?</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Ja. Schreib mir kurz vorher — wir finden eine Lösung. Ratenzahlung auf Anfrage ist möglich.</p>
+      </details>
+      <details class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold list-none">
+          <span>Was wenn der Kurs nichts für mich ist?</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Nach Session 1 unzufrieden? Du kriegst dein Geld zurück. Komplett. Ohne Diskussion. Damit gehst du null Risiko ein.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 gradient-bg-light dark:gradient-bg-dark">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Dein Businessbrain wartet nicht auf 2030.</h2>
+    <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+      Die Firmen, die in zwei Jahren souverän mit AI arbeiten, sind die, die heute anfangen. 5 Wochen, 8 Plätze, ein klares Ergebnis.
+    </p>
+    <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+      <a href="#anmelden" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all btn-touch">
+        Jetzt Platz sichern
+      </a>
+      <a href="https://www.calendly.com/qrisriner" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl btn-touch transition-colors">
+        Erst kurz reden
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+    <div class="font-semibold"><span class="gradient-text">Maker</span> Academy by Contextery</div>
+    <div class="flex items-center gap-4">
+      <a href="https://contextery.com" class="hover:text-slate-700 dark:hover:text-slate-200 transition-colors">contextery.com</a>
+      <a href="/slides/" target="_blank" class="hover:text-slate-700 dark:hover:text-slate-200 transition-colors">Programm-Slides</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle: respect system, allow manual override stored in localStorage
+  (function() {
+    const root = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && systemDark)) root.classList.add('dark');
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+  })();
+</script>
+
+</body>
+</html>

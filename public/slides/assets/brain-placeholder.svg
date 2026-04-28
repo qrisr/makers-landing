@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="1"></stop>
+      <stop offset="45%" stop-color="#6366f1" stop-opacity=".9"></stop>
+      <stop offset="75%" stop-color="#06b6d4" stop-opacity=".5"></stop>
+      <stop offset="100%" stop-color="#030308" stop-opacity="0"></stop>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="2"></feGaussianBlur></filter>
+  </defs>
+  <circle cx="200" cy="200" r="180" fill="url(#g1)" opacity=".9"></circle>
+  <g fill="none" stroke="#e0e7ff" stroke-width="1.5" opacity=".85">
+    <path d="M200 90 C 130 90 95 150 105 200 C 95 250 130 310 200 310 C 270 310 305 250 295 200 C 305 150 270 90 200 90 Z"></path>
+    <path d="M200 90 L200 310" stroke-dasharray="2 4"></path>
+    <path d="M140 130 C 170 145 170 180 150 200 C 170 220 170 255 140 270"></path>
+    <path d="M260 130 C 230 145 230 180 250 200 C 230 220 230 255 260 270"></path>
+    <path d="M115 200 L 180 200"></path>
+    <path d="M220 200 L 285 200"></path>
+  </g>
+  <g fill="#a5b4fc">
+    <circle cx="160" cy="155" r="3"></circle>
+    <circle cx="240" cy="155" r="3"></circle>
+    <circle cx="175" cy="205" r="3"></circle>
+    <circle cx="225" cy="205" r="3"></circle>
+    <circle cx="155" cy="250" r="3"></circle>
+    <circle cx="245" cy="250" r="3"></circle>
+    <circle cx="200" cy="180" r="3"></circle>
+    <circle cx="200" cy="230" r="3"></circle>
+  </g>
+</svg>
