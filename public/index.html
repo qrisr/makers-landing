@@ -331,25 +331,129 @@
       <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">21 Slides — alle Phasen, alle Lektionen, alle Ergebnisse. Pfeiltasten zum Durchblättern.</p>
     </div>
 
-    <!-- Iframe Embed: 4:3 auf Mobile (lesbarer), 16:9 ab Tablet -->
-    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 bg-slate-900 aspect-[4/3] sm:aspect-video min-h-[420px] sm:min-h-0">
-      <iframe
-        src="/slides"
-        title="AI-Businessbrain Kurs — Vollständige Präsentation"
-        class="absolute inset-0 w-full h-full"
-        loading="lazy"
-        allow="fullscreen"
-      ></iframe>
+    <!-- Slide-Slider mit Swipe + Snap -->
+    <div class="relative">
+      <!-- Slider Container -->
+      <div id="slide-slider" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 pb-4 -mx-4 sm:mx-0 px-4 sm:px-0" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <style>#slide-slider::-webkit-scrollbar { display: none; }</style>
+        <!-- 24 Slides -->
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-01.webp" alt="Slide 1" loading="eager" data-slide-idx="0" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-02.webp" alt="Slide 2" loading="lazy" data-slide-idx="1" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-03.webp" alt="Slide 3" loading="lazy" data-slide-idx="2" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-04.webp" alt="Slide 4" loading="lazy" data-slide-idx="3" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-05.webp" alt="Slide 5" loading="lazy" data-slide-idx="4" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-06.webp" alt="Slide 6" loading="lazy" data-slide-idx="5" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-07.webp" alt="Slide 7" loading="lazy" data-slide-idx="6" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-08.webp" alt="Slide 8" loading="lazy" data-slide-idx="7" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-09.webp" alt="Slide 9" loading="lazy" data-slide-idx="8" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-10.webp" alt="Slide 10" loading="lazy" data-slide-idx="9" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-11.webp" alt="Slide 11" loading="lazy" data-slide-idx="10" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-12.webp" alt="Slide 12" loading="lazy" data-slide-idx="11" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-13.webp" alt="Slide 13" loading="lazy" data-slide-idx="12" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-14.webp" alt="Slide 14" loading="lazy" data-slide-idx="13" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-15.webp" alt="Slide 15" loading="lazy" data-slide-idx="14" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-16.webp" alt="Slide 16" loading="lazy" data-slide-idx="15" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-17.webp" alt="Slide 17" loading="lazy" data-slide-idx="16" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-18.webp" alt="Slide 18" loading="lazy" data-slide-idx="17" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-19.webp" alt="Slide 19" loading="lazy" data-slide-idx="18" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-20.webp" alt="Slide 20" loading="lazy" data-slide-idx="19" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-21.webp" alt="Slide 21" loading="lazy" data-slide-idx="20" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-22.webp" alt="Slide 22" loading="lazy" data-slide-idx="21" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-23.webp" alt="Slide 23" loading="lazy" data-slide-idx="22" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+        <div class="snap-center shrink-0 w-[85%] sm:w-full sm:max-w-3xl mx-auto"><img src="/slide-images/slide-24.webp" alt="Slide 24" loading="lazy" data-slide-idx="23" class="slide-img w-full rounded-2xl shadow-2xl shadow-brand-500/10 ring-1 ring-slate-200 dark:ring-slate-800 cursor-zoom-in transition-transform hover:scale-[1.01]"></div>
+      </div>
+
+      <!-- Prev/Next Buttons (Desktop) -->
+      <button id="slide-prev" type="button" aria-label="Vorherige Slide" class="hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/95 dark:bg-slate-900/95 shadow-lg border border-slate-200 dark:border-slate-700 items-center justify-center hover:bg-white dark:hover:bg-slate-800 transition-colors btn-touch">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button id="slide-next" type="button" aria-label="Nächste Slide" class="hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/95 dark:bg-slate-900/95 shadow-lg border border-slate-200 dark:border-slate-700 items-center justify-center hover:bg-white dark:hover:bg-slate-800 transition-colors btn-touch">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
     </div>
 
-    <!-- Vollbild-Button immer sichtbar -->
+    <!-- Counter / Hinweise -->
     <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
-      <a href="/slides" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg btn-touch transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
-        Im Vollbild öffnen
-      </a>
-      <span class="hidden sm:inline text-xs text-slate-500 dark:text-slate-400">Im Vollbild Pfeiltasten ← → zum Durchblättern</span>
+      <span id="slide-counter" class="text-sm font-semibold text-slate-700 dark:text-slate-300">Slide <span id="slide-current">1</span> von 24</span>
+      <span class="hidden sm:inline text-xs text-slate-500 dark:text-slate-400">·</span>
+      <span class="text-xs text-slate-500 dark:text-slate-400">Klick auf Bild für Vollbild · Mobile: wischen</span>
     </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Slide-Vollbild">
+      <button id="lightbox-close" type="button" aria-label="Schliessen" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center btn-touch transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <button id="lightbox-prev" type="button" aria-label="Zurück" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center btn-touch transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button id="lightbox-next" type="button" aria-label="Weiter" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center btn-touch transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <img id="lightbox-img" src="" alt="" class="max-w-[95vw] max-h-[90vh] rounded-lg shadow-2xl">
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium"><span id="lightbox-counter">1 / 24</span></div>
+    </div>
+
+    <script>
+      (function() {
+        const slider = document.getElementById('slide-slider');
+        const prevBtn = document.getElementById('slide-prev');
+        const nextBtn = document.getElementById('slide-next');
+        const current = document.getElementById('slide-current');
+        const slides = slider.querySelectorAll('img');
+        const total = slides.length;
+
+        const getCurrentIdx = () => {
+          const sw = slider.clientWidth;
+          return Math.round(slider.scrollLeft / sw);
+        };
+        const scrollTo = (i) => {
+          const target = slides[Math.max(0, Math.min(total - 1, i))].parentElement;
+          target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        };
+        prevBtn.addEventListener('click', () => scrollTo(getCurrentIdx() - 1));
+        nextBtn.addEventListener('click', () => scrollTo(getCurrentIdx() + 1));
+        slider.addEventListener('scroll', () => {
+          current.textContent = getCurrentIdx() + 1;
+        }, { passive: true });
+
+        // Lightbox
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbCounter = document.getElementById('lightbox-counter');
+        const lbClose = document.getElementById('lightbox-close');
+        const lbPrev = document.getElementById('lightbox-prev');
+        const lbNext = document.getElementById('lightbox-next');
+        let lbIdx = 0;
+
+        const showLb = (i) => {
+          lbIdx = Math.max(0, Math.min(total - 1, i));
+          lbImg.src = slides[lbIdx].src;
+          lbImg.alt = slides[lbIdx].alt;
+          lbCounter.textContent = `${lbIdx + 1} / ${total}`;
+          lb.classList.remove('hidden');
+          lb.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        };
+        const hideLb = () => {
+          lb.classList.add('hidden');
+          lb.classList.remove('flex');
+          document.body.style.overflow = '';
+        };
+
+        slides.forEach((img, i) => img.addEventListener('click', () => showLb(i)));
+        lbClose.addEventListener('click', hideLb);
+        lb.addEventListener('click', (e) => { if (e.target === lb) hideLb(); });
+        lbPrev.addEventListener('click', () => showLb(lbIdx - 1));
+        lbNext.addEventListener('click', () => showLb(lbIdx + 1));
+        document.addEventListener('keydown', (e) => {
+          if (lb.classList.contains('hidden')) return;
+          if (e.key === 'Escape') hideLb();
+          else if (e.key === 'ArrowLeft') showLb(lbIdx - 1);
+          else if (e.key === 'ArrowRight') showLb(lbIdx + 1);
+        });
+      })();
+    </script>
 
     <!-- Download Buttons -->
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
